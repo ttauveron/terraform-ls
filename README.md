@@ -2,6 +2,26 @@
 
 The official [Terraform](https://www.terraform.io) language server (`terraform-ls`) maintained by [HashiCorp](https://www.hashicorp.com) provides IDE features to any [LSP](https://microsoft.github.io/language-server-protocol/)-compatible editor.
 
+## Personal notes
+```
+docker run -it -v $(pwd)/:/project -w /project golang:1.21.3 bash
+GOOS=linux; GOARCH=386; go build -buildvcs=false -o terraform-ls-$GOOS-$GOARCH
+GOOS=linux; GOARCH=amd64; go build -buildvcs=false -o terraform-ls-$GOOS-$GOARCH
+GOOS=linux; GOARCH=arm; go build -buildvcs=false -o terraform-ls-$GOOS-$GOARCH
+GOOS=linux; GOARCH=arm64; go build -buildvcs=false -o terraform-ls-$GOOS-$GOARCH
+GOOS=freebsd; GOARCH=386; go build -buildvcs=false -o terraform-ls-$GOOS-$GOARCH
+GOOS=freebsd; GOARCH=amd64; go build -buildvcs=false -o terraform-ls-$GOOS-$GOARCH
+GOOS=freebsd; GOARCH=arm; go build -buildvcs=false -o terraform-ls-$GOOS-$GOARCH
+GOOS=openbsd; GOARCH=386; go build -buildvcs=false -o terraform-ls-$GOOS-$GOARCH
+GOOS=openbsd; GOARCH=amd64; go build -buildvcs=false -o terraform-ls-$GOOS-$GOARCH
+GOOS=solaris; GOARCH=amd64; go build -buildvcs=false -o terraform-ls-$GOOS-$GOARCH
+GOOS=windows; GOARCH=386; go build -buildvcs=false -o terraform-ls-$GOOS-$GOARCH
+GOOS=windows; GOARCH=amd64; go build -buildvcs=false -o terraform-ls-$GOOS-$GOARCH
+GOOS=windows; GOARCH=arm64; go build -buildvcs=false -o terraform-ls-$GOOS-$GOARCH
+GOOS=darwin; GOARCH=arm64; go build -buildvcs=false -o terraform-ls-$GOOS-$GOARCH
+GOOS=darwin; GOARCH=amd64; go build -buildvcs=false -o terraform-ls-$GOOS-$GOARCH
+```
+
 ## Current Status
 
 Not all language features (from LSP's or any other perspective) are available
